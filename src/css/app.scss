@@ -1,0 +1,12 @@
+// app global css in SCSS form
+.row > div {
+  background: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+.top-image{
+  padding: 0; 
+  margin: 0; 
+  height:200px; 
+  background: no-repeat center/80% url('../assets/contractor-shaking-hands-with-customer-alt.png');
+}

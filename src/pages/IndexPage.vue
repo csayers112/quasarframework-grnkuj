@@ -22,7 +22,7 @@
                     v-model="step"
                     ref="stepper"
                     contracted
-                    color="primary"
+                    color="secondary"
                     animated
                   >
                     <q-step

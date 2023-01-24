@@ -2,84 +2,68 @@
 
 /* ----------- MEDIA QUERIES ------------------*/
 
-
 @media all and (min-width: 1280px) {
   .content {
     padding: 15px;
   }
-
-  .showMobile{
+  .showMobile {
     display: none !important;
   }
-
-  .showDesktop{
+  .showDesktop {
     display: block !important;
   }
-
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
   .content {
     padding: 15px;
   }
-
-  .showMobile{
+  .showMobile {
     display: none !important;
   }
-
-  .showDesktop{
+  .showDesktop {
     display: block !important;
   }
-
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
     height: 150px !important;
     width: 100% !important;
     position: relative !important;
   }
-
   .content {
     padding: 15px !important;
   }
-
-  .showMobile{
+  .showMobile {
     display: block !important;
   }
-  .showDesktop{
+  .showDesktop {
     display: none !important;
   }
-
 }
 
 @media all and (max-width: 768px) {
-
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
     height: 150px !important;
     width: 100% !important;
     position: relative !important;
   }
-
   .main-headline {
-    font-size:32px !important;
+    font-size: 32px !important;
   }
-
   .content {
     padding: 15px !important;
   }
-
-  .showMobile{
+  .showMobile {
     display: block !important;
   }
-  .showDesktop{
+  .showDesktop {
     display: none !important;
   }
 }
-
 
 /*---------------- QUASAR OVERRIDES --------------------*/
 
@@ -128,22 +112,18 @@ h1 {
 }
 
 .q-item__label {
-  font-weight:600;
+  font-weight: 600;
 }
 
 .q-banner__avatar > .q-icon {
   font-size: 20px;
 }
 
-.q-banner{
+.q-banner {
   padding-top: 20px;
 }
 
-
-
 /*---------------- ONBOARDING SPECIFIC STYLES --------------------*/
-
-
 
 .top-image {
   padding: 0;
@@ -176,15 +156,16 @@ h1 {
   line-height: 110% !important;
 }
 
-.home-cards .my-card{
+.home-cards .my-card {
   cursor: pointer !important;
   max-height: 140px;
   min-height: 100px;
   transition: transform ease 0.5s, box-shadow ease 0.5s;
 }
 
-.home-cards .my-card:hover{
-  box-shadow: 0 3px 8px rgb(0 0 0 / 40%), 0 4px 4px rgb(0 0 0 / 14%), 0 6px 2px -5px rgb(0 0 0 / 24%);
+.home-cards .my-card:hover {
+  box-shadow: 0 3px 8px rgb(0 0 0 / 40%), 0 4px 4px rgb(0 0 0 / 14%),
+    0 6px 2px -5px rgb(0 0 0 / 24%);
   transform: translateY(-5px);
+  background-color: #F5FCFD;
 }
-

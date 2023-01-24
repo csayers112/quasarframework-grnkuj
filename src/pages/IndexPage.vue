@@ -834,8 +834,7 @@
                       <q-card-actions align="right">
                         <q-btn
                           v-close-popup
-                          flat
-                          color="primary"
+                          color="secondary"
                           label="Explore"
                         />
                       </q-card-actions>

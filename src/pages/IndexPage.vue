@@ -10,7 +10,7 @@
           <div class="q-pa-md content">
             <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12">
               <div id="q-app" style="min-height: 100vh">
-                <div class="" ref="top">
+                <div class="">
                   <q-stepper
                     v-model="step"
                     ref="stepper"
@@ -28,7 +28,7 @@
                       <h1 class="main-headline">
                         Let’s get you up and running.
                       </h1>
-                      <p style="font-size: 20px">
+                      <p style="font-size: 20px" ref="top">
                         We promised you simple. Now we prove it.
                       </p>
                       <q-banner class="bg-grey-3">

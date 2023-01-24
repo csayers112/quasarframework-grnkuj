@@ -13,18 +13,23 @@ html {
     padding: 30px;
   }
 
+  .sm-image-class{display:none !important;}
+  .bg-image-class{display:block !important;}
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
   .content {
     padding: 30px;
   }
+  .sm-image-class{display:none !important;};
+  .bg-image-class{display:block !important;};
 
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   
-
+  .sm-image-class{display:block !important;}
+  .bg-image-class{display:none !important;}
   
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
@@ -40,8 +45,9 @@ html {
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-  
 
+  .sm-image-class{display:block !important;}
+  .bg-image-class{display:none !important;}
 
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
@@ -61,7 +67,8 @@ html {
 
 @media all and (max-width: 480px) {
   
-
+  .sm-image-class{display:block !important;}
+  .bg-image-class{display:none !important;}
 
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;

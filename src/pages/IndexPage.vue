@@ -635,29 +635,23 @@
 
                    <q-dialog v-model="card">
                     <q-card class="my-card">
-                      <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+                      <q-img src="src/assets/welcome-image.png" />
 
                       <q-card-section>
                      
 
                         <div class="row no-wrap items-center" style="text-align:center">
                           <div class="col text-h6 ellipsis">
-                            You're in. Congrats! 
+                            Your first step is out of the way.
                           </div>
-                         
                         </div>
-
                       </q-card-section>
 
                       <q-card-section class="q-pt-none" style="text-align:center">
                         <div class="text-subtitle1">
-                          Your first step is out of the way.
-                        </div>
-                        <div class="text-caption text-grey">
                           Next up, we'll guide you through a few key things you'll need to get the most of Acorn Finance.
                         </div>
                       </q-card-section>
-
                       <q-separator />
 
                       <q-card-actions align="right">

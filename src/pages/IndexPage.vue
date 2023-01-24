@@ -45,7 +45,7 @@
                         </template>
                         <b>Pro tip </b>
                         <p>
-                          Book a call with a contractor adviser is the easiest
+                          Booking a call with a contractor adviser is the easiest
                           way to get started.
                         </p>
                       </q-banner>
@@ -761,28 +761,47 @@
                     </q-step>
 
                     <template v-slot:navigation>
-                      <q-stepper-navigation style="text-align: right">
-                        <q-btn
+                      <q-stepper-navigation >
+                        <div style="float: right">
+                          <q-btn
+                            v-if="step > 1"
+                            flat
+                            color="secondary"
+                            @click="
+                              $refs.stepper.previous();
+                              $router.replace('#top');
+                            "
+                            label="Back"
+                            class="q-ml-sm"
+                          ></q-btn>
+
+                          <q-btn
+                            @click="
+                              $refs.stepper.next();
+                              $router.replace('#top');
+                            "
+                            color="secondary"
+                            :label="step === 6 ? 'My Portal' : 'Next'"
+                          ></q-btn>
+                        </div>
+
+                        <div style="float: left">
+                         <q-btn
                           v-if="step > 1"
                           flat
                           color="secondary"
                           @click="
-                            $refs.stepper.previous();
+                            $refs.stepper.goTo(1);
                             $router.replace('#top');
                           "
-                          label="Back"
+                          label="Menu"
                           class="q-ml-sm"
                         ></q-btn>
 
-                        <q-btn
-                          @click="
-                            $refs.stepper.next();
-                            $router.replace('#top');
-                          "
-                          color="secondary"
-                          :label="step === 6 ? 'My Portal' : 'Continue'"
-                        ></q-btn>
+                        </div>
+
                       </q-stepper-navigation>
+                       
                     </template>
                   </q-stepper>
 

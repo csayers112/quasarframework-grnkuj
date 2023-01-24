@@ -276,7 +276,7 @@
                         title=""
                         style="border: none"
                         width="100%"
-                        height="1000"
+                        height="900"
                       ></iframe>
                     </q-step>
 

@@ -47,6 +47,10 @@
                         icon="event"
                         class="full-width"
                         label="Talk to us"
+                        @click="
+                            $refs.stepper.goTo(3);
+                            $router.replace('#top');
+                          "
                       ></q-btn>
                       <div style="text-align: center" class="justify-center">
                         <q-btn
@@ -54,6 +58,10 @@
                           color="secondary"
                           label="Get your link"
                           icon-right="navigate_next"
+                           @click="
+                            $refs.stepper.goTo(2);
+                            $router.replace('#top');
+                          "
                         />
                       </div>
 

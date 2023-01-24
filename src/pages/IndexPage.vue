@@ -7,7 +7,6 @@
         >
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
-
         <div
           class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first"
         >
@@ -45,8 +44,8 @@
                         </template>
                         <b>Pro tip </b>
                         <p>
-                          Booking a call with a contractor adviser is the easiest
-                          way to get started.
+                          Booking a call with a contractor adviser is the
+                          easiest way to get started.
                         </p>
                       </q-banner>
                       <br />
@@ -83,7 +82,7 @@
                             <div class="q-card my-card">
                               <div
                                 @click="
-                                  $refs.stepper.goTo(1);
+                                  $refs.stepper.goTo(2);
                                   $router.replace('#top');
                                 "
                                 class="q-card__section q-card__section--vert"
@@ -106,7 +105,7 @@
                             <div class="q-card my-card">
                               <div
                                 @click="
-                                  $refs.stepper.goTo(2);
+                                  $refs.stepper.goTo(3);
                                   $router.replace('#top');
                                 "
                                 class="q-card__section q-card__section--vert"
@@ -125,7 +124,7 @@
                             <div class="q-card my-card">
                               <div
                                 @click="
-                                  $refs.stepper.goTo(3);
+                                  $refs.stepper.goTo(5);
                                   $router.replace('#top');
                                 "
                                 class="q-card__section q-card__section--vert"
@@ -166,7 +165,7 @@
                             <div class="q-card my-card">
                               <div
                                 @click="
-                                  $refs.stepper.goTo(5);
+                                  $refs.stepper.goTo(6);
                                   $router.replace('#top');
                                 "
                                 class="q-card__section q-card__section--vert"
@@ -201,26 +200,7 @@
                             </div>
                           </div>
                         </div>
-
-                        <!--
-                        <div class="row q-col-gutter-x-md q-col-gutter-y-lg">
-                          <div class="col-4" v-for="n in 6" :key="`xl-${n}`">
-                            <q-card
-                              @click="
-                                $refs.stepper.goTo(2);
-                                $router.replace('#top');
-                              "
-                              class="my-card"
-                            >
-                              <q-card-section>
-                                <p>Grab your link to share with customers</p>
-                              </q-card-section>
-                            </q-card>
-                          </div>
-                        </div>
-                        -->
                       </div>
-
                       <div class="showMobile">
                         <q-list>
                           <q-item
@@ -231,14 +211,13 @@
                             clickable
                             v-ripple
                           >
-                            <q-icon color="secondary" name="content_copy" />
-
                             <q-item-section
                               >Grab your link to share with
                               customers</q-item-section
                             >
+
                             <q-item-section avatar>
-                              <q-icon color="secondary" name="navigate_next" />
+                              <q-icon color="primary" name="navigate_next" />
                             </q-item-section>
                           </q-item>
 
@@ -761,7 +740,7 @@
                     </q-step>
 
                     <template v-slot:navigation>
-                      <q-stepper-navigation >
+                      <q-stepper-navigation>
                         <div style="float: right">
                           <q-btn
                             v-if="step > 1"
@@ -786,22 +765,19 @@
                         </div>
 
                         <div style="float: left">
-                         <q-btn
-                          v-if="step > 1"
-                          flat
-                          color="secondary"
-                          @click="
-                            $refs.stepper.goTo(1);
-                            $router.replace('#top');
-                          "
-                          label="Menu"
-                          class="q-ml-sm"
-                        ></q-btn>
-
+                          <q-btn
+                            v-if="step > 1"
+                            flat
+                            color="secondary"
+                            @click="
+                              $refs.stepper.goTo(1);
+                              $router.replace('#top');
+                            "
+                            label="Menu"
+                            class="q-ml-sm"
+                          ></q-btn>
                         </div>
-
                       </q-stepper-navigation>
-                       
                     </template>
                   </q-stepper>
 

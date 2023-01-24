@@ -2,14 +2,14 @@
   <q-page class="column flex-center">
     <div id="q-app" style="min-height: 100vh">
       <div class="row justify-center">
-       
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last">
+        <div class="showDesktop col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last">
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
-       
-    
-   
-     
+
+        <div class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first">
+          <div class="top-image" style="margin-top: -10px"></div>
+        </div>
+
         <div class="col-md-7 col-lg-7 col-xs-12 col-sm-12">
           <div class="q-pa-md content">
             <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12">
@@ -52,9 +52,9 @@
                         class="full-width"
                         label="Talk to us"
                         @click="
-                            $refs.stepper.goTo(3);
-                            $router.replace('#top');
-                          "
+                          $refs.stepper.goTo(3);
+                          $router.replace('#top');
+                        "
                       ></q-btn>
                       <div style="text-align: center" class="justify-center">
                         <q-btn
@@ -62,7 +62,7 @@
                           color="secondary"
                           label="Get your link"
                           icon-right="navigate_next"
-                           @click="
+                          @click="
                             $refs.stepper.goTo(2);
                             $router.replace('#top');
                           "
@@ -73,104 +73,124 @@
                       <br />
                       <p class="eyebrow-text">GET YOUR TOOLS</p>
 
-                      <q-list>
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(2);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section
-                            >Grab your link to share with
-                            customers</q-item-section
-                          >
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
+                      <div class="showDesktop">
+                        <div class="row q-col-gutter-x-md q-col-gutter-y-lg">
+                          <div class="col-4" v-for="n in 6" :key="`xl-${n}`">
+                            <q-card
+                              @click="
+                                $refs.stepper.goTo(2);
+                                $router.replace('#top');
+                              "
+                              class="my-card"
+                            >
+                              <q-card-section>
+                                <p>Grab your link to share with customers</p>
+                              </q-card-section>
+                            </q-card>
+                          </div>
+                        </div>
+                      </div>
 
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(3);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section
-                            >Book a call with a contractor
-                            adviser</q-item-section
+                      <div class="showMobile">
+                        <q-list>
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(2);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
                           >
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
+                            <q-item-section
+                              >Grab your link to share with
+                              customers</q-item-section
+                            >
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
 
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(4);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section
-                            >Learn how to talk about financing</q-item-section
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(3);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
                           >
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
+                            <q-item-section
+                              >Book a call with a contractor
+                              adviser</q-item-section
+                            >
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
 
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(5);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section
-                            >See what your customer sees</q-item-section
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(4);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
                           >
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
+                            <q-item-section
+                              >Learn how to talk about financing</q-item-section
+                            >
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
 
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(6);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section
-                            >Snag a cheatsheet to answer
-                            questions</q-item-section
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(5);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
                           >
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
+                            <q-item-section
+                              >See what your customer sees</q-item-section
+                            >
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
 
-                        <q-item
-                          @click="
-                            $refs.stepper.goTo(6);
-                            $router.replace('#top');
-                          "
-                          clickable
-                          v-ripple
-                        >
-                          <q-item-section>Open your portal</q-item-section>
-                          <q-item-section avatar>
-                            <q-icon color="primary" name="navigate_next" />
-                          </q-item-section>
-                        </q-item>
-                      </q-list>
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(6);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
+                          >
+                            <q-item-section
+                              >Snag a cheatsheet to answer
+                              questions</q-item-section
+                            >
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
+
+                          <q-item
+                            @click="
+                              $refs.stepper.goTo(6);
+                              $router.replace('#top');
+                            "
+                            clickable
+                            v-ripple
+                          >
+                            <q-item-section>Open your portal</q-item-section>
+                            <q-item-section avatar>
+                              <q-icon color="primary" name="navigate_next" />
+                            </q-item-section>
+                          </q-item>
+                        </q-list>
+                      </div>
                     </q-step>
 
                     <q-step
@@ -607,9 +627,9 @@
                         "
                       />
                     </q-step>
-                    
+
                     <template v-slot:navigation>
-                      <q-stepper-navigation style="text-align:right;">
+                      <q-stepper-navigation style="text-align: right">
                         <q-btn
                           v-if="step > 1"
                           flat
@@ -630,36 +650,43 @@
                           color="secondary"
                           :label="step === 6 ? 'My Portal' : 'Continue'"
                         ></q-btn>
-
                       </q-stepper-navigation>
                     </template>
-
-                
                   </q-stepper>
 
-                   <q-dialog v-model="card">
+                  <q-dialog v-model="card">
                     <q-card class="my-card">
                       <q-img src="src/assets/welcome-image.png" />
 
                       <q-card-section>
-                     
-
-                        <div class="row no-wrap items-center" style="text-align:center">
+                        <div
+                          class="row no-wrap items-center"
+                          style="text-align: center"
+                        >
                           <div class="col text-h6 ellipsis">
                             Your first step is out of the way.
                           </div>
                         </div>
                       </q-card-section>
 
-                      <q-card-section class="q-pt-none" style="text-align:center">
+                      <q-card-section
+                        class="q-pt-none"
+                        style="text-align: center"
+                      >
                         <div class="text-subtitle1">
-                          Next up, we'll guide you through a few key things you'll need to get the most of Acorn Finance.
+                          Next up, we'll guide you through a few key things
+                          you'll need to get the most of Acorn Finance.
                         </div>
                       </q-card-section>
                       <q-separator />
 
                       <q-card-actions align="right">
-                        <q-btn v-close-popup flat color="primary" label="Explore" />
+                        <q-btn
+                          v-close-popup
+                          flat
+                          color="primary"
+                          label="Explore"
+                        />
                       </q-card-actions>
                     </q-card>
                   </q-dialog>
@@ -683,7 +710,7 @@ export default {
   setup() {
     return {
       step: ref(1),
-      card: ref(true)
+      card: ref(true),
     };
   },
 };

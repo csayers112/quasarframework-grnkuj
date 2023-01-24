@@ -7,7 +7,7 @@
         </div>
 
         <div class="col-md-7 col-lg-7 col-xs-12 col-sm-12">
-          <div class="q-pa-md content" >
+          <div class="q-pa-md content">
             <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12">
               <div id="q-app" style="min-height: 100vh">
                 <div class="" ref="top">
@@ -63,7 +63,10 @@
 
                       <q-list>
                         <q-item
-                          @click="$refs.stepper.goTo(2); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(2);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -77,7 +80,10 @@
                         </q-item>
 
                         <q-item
-                          @click="$refs.stepper.goTo(3); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(3);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -91,7 +97,10 @@
                         </q-item>
 
                         <q-item
-                          @click="$refs.stepper.goTo(3); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(4);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -104,7 +113,10 @@
                         </q-item>
 
                         <q-item
-                          @click="$refs.stepper.goTo(4); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(5);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -117,7 +129,10 @@
                         </q-item>
 
                         <q-item
-                          @click="$refs.stepper.goTo(5); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(6);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -131,7 +146,10 @@
                         </q-item>
 
                         <q-item
-                          @click="$refs.stepper.goTo(6); $router.replace('#top');"
+                          @click="
+                            $refs.stepper.goTo(6);
+                            $router.replace('#top');
+                          "
                           clickable
                           v-ripple
                         >
@@ -230,7 +248,12 @@
                       </q-timeline>
                     </q-step>
 
-                    <q-step :name="3" title="Book a meeting" icon="add_comment">
+                    <q-step
+                      :name="3"
+                      title="Book a meeting"
+                      icon="add_comment"
+                      :done="step > 3"
+                    >
                       <p class="eyebrow-text">BOOK A MEETING</p>
                       <h1 class="main-headline">Let’s talk it out.</h1>
                       <p style="font-size: 20px">
@@ -253,6 +276,7 @@
                       :name="4"
                       title="Talk about Financing"
                       icon="add_comment"
+                      :done="step > 4"
                     >
                       <p class="eyebrow-text">PREVIEW THE PROCESS</p>
                       <h1 class="main-headline">Know what’s coming.</h1>
@@ -380,6 +404,7 @@
                       :name="5"
                       title="Talk about Financing"
                       icon="add_comment"
+                      :done="step > 5"
                     >
                       <p class="eyebrow-text">SAVE SOME SHORTCUTS</p>
                       <h1 class="main-headline">When they ask, answer.</h1>
@@ -541,42 +566,63 @@
                       </q-list>
                     </q-step>
 
-
-
-                      <q-step :name="6" title="Head to the Portal" icon="add_comment">
+                    <q-step
+                      :name="6"
+                      title="Head to the Portal"
+                      icon="add_comment"
+                      :done="step > 6"
+                    >
                       <p class="eyebrow-text">CREATE YOUR ACCOUNT</p>
                       <h1 class="main-headline">Welcome to your portal.</h1>
                       <p style="font-size: 20px">
-                        Here’s where you’ll find grab-and-go marketing assets, training videos and materials, and a permanent home for your application link. When you sign in, you’ll unlock notifications of your customers’ progress as they apply and get funded. 
-
-                        Just choose a username and password.
+                        Here’s where you’ll find grab-and-go marketing assets,
+                        training videos and materials, and a permanent home for
+                        your application link. When you sign in, you’ll unlock
+                        notifications of your customers’ progress as they apply
+                        and get funded. Just choose a username and password.
                       </p>
 
-                      <iframe
-                        
-                      ></iframe>
+                      <img
+                        src="/src/assets/contractor-portal-mockup.PNG"
+                        style="
+                          width: 100%;
+                          max-width: 600px !important;
+                          height: auto;
+                          margin-bottom: 40px;
+                          margin-top: 20px;
+                          margin-left: auto;
+                          margin-right: auto;
+                        "
+                      />
                     </q-step>
-
+                    
                     <template v-slot:navigation>
-                      <q-stepper-navigation>
+                      <q-stepper-navigation style="text-align:right;">
+                        <q-btn
+                          v-if="step > 1"
+                          flat
+                          color="primary"
+                          @click="
+                            $refs.stepper.previous();
+                            $router.replace('#top');
+                          "
+                          label="Back"
+                          class="q-ml-sm"
+                        ></q-btn>
+
                         <q-btn
                           @click="
                             $refs.stepper.next();
                             $router.replace('#top');
                           "
                           color="primary"
-                          :label="step === 3 ? 'Finish' : 'Continue'"
+                          :label="step === 6 ? 'My Portal' : 'Continue'"
                         ></q-btn>
-                        <q-btn
-                          v-if="step > 1"
-                          flat
-                          color="primary"
-                          @click="$refs.stepper.previous(); $router.replace('#top');"
-                          label="Back"
-                          class="q-ml-sm"
-                        ></q-btn>
+
                       </q-stepper-navigation>
                     </template>
+
+                
                   </q-stepper>
                 </div>
               </div>
@@ -592,8 +638,7 @@
 import { ref } from 'vue';
 import { copyToClipboard } from 'quasar';
 import { scroll } from 'quasar';
-import { Notify } from 'quasar'
-
+import { Notify } from 'quasar';
 
 export default {
   setup() {

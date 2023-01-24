@@ -632,6 +632,42 @@
 
                 
                   </q-stepper>
+
+                   <q-dialog v-model="card">
+                    <q-card class="my-card">
+                      <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+
+                      <q-card-section>
+                     
+
+                        <div class="row no-wrap items-center" style="text-align:center">
+                          <div class="col text-h6 ellipsis">
+                            You're in. Congrats! 
+                          </div>
+                         
+                        </div>
+
+                      </q-card-section>
+
+                      <q-card-section class="q-pt-none" style="text-align:center">
+                        <div class="text-subtitle1">
+                          Your first step is out of the way.
+                        </div>
+                        <div class="text-caption text-grey">
+                          Next up, we'll guide you through a few key things you'll need to get the most of Acorn Finance.
+                        </div>
+                      </q-card-section>
+
+                      <q-separator />
+
+                      <q-card-actions align="right">
+                        <q-btn v-close-popup flat color="primary" label="Explore" />
+                      </q-card-actions>
+                    </q-card>
+                  </q-dialog>
+
+
+
                 </div>
               </div>
             </div>
@@ -650,8 +686,11 @@ import { Notify } from 'quasar';
 
 export default {
   setup() {
+
     return {
       step: ref(1),
+
+      card: ref(true)
     };
   },
 };

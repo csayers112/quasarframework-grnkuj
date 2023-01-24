@@ -71,8 +71,18 @@
 
 p,
 .q-btn,
-.q-list {
+.q-list,
+.q-dialog {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+.text-h6 {
+  font-family: 'Bitter';
 }
 
 .eyebrow-text {
@@ -85,12 +95,6 @@ h1 {
   color: #082b57 !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Bitter';
-}
 
 .main-headline {
   font-size: 45px;

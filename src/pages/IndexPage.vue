@@ -2,10 +2,10 @@
   <q-page class="column flex-center">
     <div id="q-app" style="min-height: 100vh">
       <div class="row justify-center">
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
+        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last">
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
-
+     
         <div class="col-md-7 col-lg-7 col-xs-12 col-sm-12">
           <div class="q-pa-md content">
             <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12">
@@ -28,7 +28,7 @@
                       <h1 class="main-headline">
                         Let’s get you up and running.
                       </h1>
-                      <p style="font-size: 20px" ref="top">
+                      <p style="font-size: 20px">
                         We promised you simple. Now we prove it.
                       </p>
                       <q-banner class="bg-grey-3">
@@ -659,9 +659,6 @@
                       </q-card-actions>
                     </q-card>
                   </q-dialog>
-
-
-
                 </div>
               </div>
             </div>
@@ -680,10 +677,8 @@ import { Notify } from 'quasar';
 
 export default {
   setup() {
-
     return {
       step: ref(1),
-
       card: ref(true)
     };
   },

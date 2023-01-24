@@ -5,19 +5,27 @@ html {
 }
 */
 
+
+/* ----------- MEDIA QUERIES ------------------*/
+
 @media (max-width: 1280px) {
   .content {
     padding: 30px;
   }
+
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
   .content {
     padding: 30px;
   }
+
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  
+
+  
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
     height: 150px !important;
@@ -28,14 +36,22 @@ html {
   .content {
     padding: 15px !important;
   }
+
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
+  
+
+
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
     height: 150px !important;
     width: 100% !important;
     position: relative !important;
+  }
+
+  .main-headline {
+    font-size:32px !important;
   }
 
   .content {
@@ -44,6 +60,9 @@ html {
 }
 
 @media all and (max-width: 480px) {
+  
+
+
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
     height: 150px !important;
@@ -51,27 +70,25 @@ html {
     position: relative !important;
   }
 
+  .main-headline {
+    font-size:32px !important;
+  }
+
   .content {
     padding: 15px !important;
   }
 }
 
-.top-image {
-  padding: 0;
-  margin: 0;
-  z-index: -10000 !important;
-  background-image: url(../src/assets/contractor-shaking-hands-with-customer-portrait.png);
-  height: 100vh;
-  width: 100vh;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  position: fixed;
-}
 
-.content {
-  background-color: white;
-  z-index: 100000 !important;
-  padding: 50px 130px;
+/*---------------- QUASAR OVERRIDES --------------------*/
+
+h1,
+h2,
+h3,
+h4,
+.text-h6,
+.q-timeline__title {
+  font-family: 'Bitter';
 }
 
 p,
@@ -81,31 +98,8 @@ p,
   font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-.text-h6 {
-  font-family: 'Bitter';
-}
-
-.eyebrow-text {
-  font-weight: 400 !important;
-  letter-spacing: 2px !important;
-  color: #567195 !important;
-}
-
 h1 {
   color: #082b57 !important;
-}
-
-
-.main-headline {
-  font-size: 45px;
-  font-weight: 500;
-  margin-top: 0px !important;
-  line-height: 110% !important;
 }
 
 .q-btn {
@@ -132,22 +126,47 @@ h1 {
   border-left: 4px solid #dddddd;
 }
 
-.timeline-text-lg {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-  font-size: 14px;
-  margin-top: 0px;
-  font-weight: 100;
-}
-
-.q-timeline__title{
-  font-family: 'Bitter';
-}
-
-
 .q-item__label {
   font-weight:600;
 }
 
 .q-banner__avatar > .q-icon {
   font-size: 20px;
+}
+
+
+
+/*---------------- ONBOARDING SPECIFIC STYLES --------------------*/
+
+
+
+.top-image {
+  padding: 0;
+  margin: 0;
+  z-index: -10000 !important;
+  background-image: url(../src/assets/contractor-shaking-hands-with-customer-portrait.png);
+  height: 100vh;
+  width: 100vh;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: fixed;
+}
+
+.content {
+  background-color: white;
+  z-index: 100000 !important;
+  padding: 50px 130px;
+}
+
+.eyebrow-text {
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  color: #567195 !important;
+}
+
+.main-headline {
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: 0px !important;
+  line-height: 110% !important;
 }

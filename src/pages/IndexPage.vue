@@ -591,7 +591,7 @@
                       </p>
 
                       <img
-                        src="/src/assets/contractor-portal-mockup.PNG"
+                        src="/src/assets/portal-image.png"
                         style="
                           width: 100%;
                           max-width: 600px !important;

@@ -174,4 +174,13 @@ h1 {
 
 .home-cards .my-card{
   cursor: pointer !important;
+  max-height: 140px;
+  min-height: 100px;
+  transition: transform ease 0.5s, box-shadow ease 0.5s;
 }
+
+.home-cards .my-card:hover{
+  box-shadow: 0 3px 8px rgb(0 0 0 / 40%), 0 4px 4px rgb(0 0 0 / 14%), 0 6px 2px -5px rgb(0 0 0 / 24%);
+  transform: translateY(-5px);
+}
+

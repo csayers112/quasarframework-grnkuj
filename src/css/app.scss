@@ -1,50 +1,78 @@
 // app global css in SCSS form
 
 @media (max-width: 1280px) {
-  .top-image {
-    z-index: -10000 !important;
-    height:150px !important; 
-    width:100% !important;
-    background-size:100% !important; 
+  .content {
+    padding: 30px;
   }
 }
 
-@media all and (min-width: 1024px) and (max-width: 1280px) { 
-  
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .content {
+    padding: 30px;
+  }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) { 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .top-image {
+    background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
+    height: 150px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
 
+  .content {
+    padding: 15px !important;
+  }
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) { 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .top-image {
+    background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
+    height: 150px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
 
+  .content {
+    padding: 15px !important;
+  }
 }
 
-@media all and (max-width: 480px) { 
+@media all and (max-width: 480px) {
+  .top-image {
+    background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
+    height: 150px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
 
+  .content {
+    padding: 15px !important;
+  }
 }
-
-
 
 .top-image {
   padding: 0;
   margin: 0;
   z-index: -10000 !important;
-  background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png); 
-  height:100%; 
-  width:auto;
+  background-image: url(../src/assets/contractor-shaking-hands-with-customer-portrait.png);
+  height: 100vh;
+  width: 100vh;
   background-repeat: no-repeat !important;
-  background-size:100% !important; 
+  background-size: cover !important;
+  position: fixed;
 }
-            
+
 .content {
   background-color: white;
   z-index: 100000 !important;
+  padding: 50px 130px;
 }
 
-p, .q-btn {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+p,
+.q-btn,
+.q-list {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
 }
 
 .eyebrow-text {
@@ -53,8 +81,15 @@ p, .q-btn {
   color: #567195 !important;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Bitter";
+h1 {
+  color: #082b57 !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bitter';
 }
 
 .main-headline {
@@ -67,4 +102,34 @@ h1, h2, h3, h4 {
 .q-btn {
   height: 54px;
   border-radius: 4px !important;
+  font-weight: 600;
+}
+
+.q-stepper__header--border {
+  border-bottom: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+.q-stepper {
+  box-shadow: 0 0px 0px rgb(0 0 0 / 0%), 0 0px 0px rgb(0 0 0 / 0%),
+    0 0px 0px 0px rgb(0 0 0 / 0%) !important;
+}
+
+.q-header {
+  position: fixed !important;
+}
+
+.q-list {
+  font-size: 16px !important;
+  border-left: 4px solid #dddddd;
+}
+
+.timeline-text-lg {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+  font-size: 20px;
+  margin-top: 0px;
+  font-weight: 100;
+}
+
+.q-timeline__title{
+  font-family: 'Bitter';
 }

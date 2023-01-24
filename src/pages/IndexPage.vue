@@ -2,11 +2,15 @@
   <q-page class="column flex-center">
     <div id="q-app" style="min-height: 100vh">
       <div class="row justify-center">
-        <div class="showDesktop col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last">
+        <div
+          class="showDesktop col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last"
+        >
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
 
-        <div class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first">
+        <div
+          class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first"
+        >
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
 
@@ -73,7 +77,132 @@
                       <br />
                       <p class="eyebrow-text">GET YOUR TOOLS</p>
 
-                      <div class="showDesktop">
+                      <div class="showDesktop home-cards">
+                        <div class="row q-col-gutter-x-md q-col-gutter-y-lg">
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(1);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon
+                                    color="secondary"
+                                    name="content_copy"
+                                  />
+                                </q-item-section>
+                                <p>Grab your link to share with customers</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(2);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon color="secondary" name="call" />
+                                </q-item-section>
+                                <p>Book a call with a contractor adviser</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(3);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon color="secondary" name="groups" />
+                                </q-item-section>
+                                <p>Learn how to talk about financing</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(4);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon
+                                    color="secondary"
+                                    name="description"
+                                  />
+                                </q-item-section>
+                                <p>See what your customer sees</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(5);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon color="secondary" name="notes" />
+                                </q-item-section>
+                                <p>Snag a cheatsheet to answer questions</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="q-card my-card">
+                              <div
+                                @click="
+                                  $refs.stepper.goTo(6);
+                                  $router.replace('#top');
+                                "
+                                class="q-card__section q-card__section--vert"
+                              >
+                                <q-item-section
+                                  avatar
+                                  style="margin-bottom: 10px"
+                                >
+                                  <q-icon color="secondary" name="computer" />
+                                </q-item-section>
+                                <p>Access your financing portal</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--
                         <div class="row q-col-gutter-x-md q-col-gutter-y-lg">
                           <div class="col-4" v-for="n in 6" :key="`xl-${n}`">
                             <q-card
@@ -89,6 +218,7 @@
                             </q-card>
                           </div>
                         </div>
+                        -->
                       </div>
 
                       <div class="showMobile">
@@ -101,12 +231,14 @@
                             clickable
                             v-ripple
                           >
+                            <q-icon color="secondary" name="content_copy" />
+
                             <q-item-section
                               >Grab your link to share with
                               customers</q-item-section
                             >
                             <q-item-section avatar>
-                              <q-icon color="primary" name="navigate_next" />
+                              <q-icon color="secondary" name="navigate_next" />
                             </q-item-section>
                           </q-item>
 

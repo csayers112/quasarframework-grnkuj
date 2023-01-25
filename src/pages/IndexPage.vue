@@ -51,7 +51,7 @@
                           <q-btn
                           outline
                           color="accent"
-                          label="Setup a call"
+                          label="Book a call"
                           icon-right="navigate_next"
                           @click="
                             $refs.stepper.goTo(3);
@@ -68,6 +68,8 @@
                             $router.replace('#top');
                           "
                         />
+                        <br />
+                        <br />
                         </div>
                       </q-banner>
                       <br />
@@ -361,18 +363,100 @@
                           Bookmark this link on the homepage of your phone to
                           keep it handy.
                         </p>
+
+                        <br />
+                        
+                  
+                
+                           
+                              <div class="q-gutter-y-md">
+                         
+                                  <q-tabs
+                                    v-model="tab"
+                                    dense
+                                    class="text-grey"
+                                    active-color="primary"
+                                    indicator-color="primary"
+                                    align="justify"
+                                    narrow-indicator
+                                  >
+                                    <q-tab name="text" icon="sms" label="Text" />
+                                    <q-tab name="email" icon="outgoing_mail" label="Email" />
+                                    <q-tab name="copy" icon="content_copy" label="Copy" />
+                                  </q-tabs>
+
+                                  <q-separator />
+
+                                  <q-tab-panels v-model="tab" animated>
+                                    <q-tab-panel name="text">
+                                      <div class="text-h6">Send me a text</div>
+                                     <p> We'll send you a text message of your application link to <br /> <b>555-555-5555</b> </p>
+                                     <q-btn
+                                        outline
+                                        color="accent"
+                                        label="Send me a text"
+                                        icon-right="navigate_next"
+                                        @click="
+                                          $router.replace('#top');
+                                        "
+                                      />
+                                    </q-tab-panel>
+
+                                    <q-tab-panel name="email">
+                                     <div class="text-h6">Send me an email</div>
+                                     <p> We'll send you an email of your application link to <br /> <b>jsample@gmail.com</b> </p>
+                                     <q-btn
+                                        outline
+                                        color="accent"
+                                        label="Send me an email"
+                                        icon-right="navigate_next"
+                                        @click="
+                                          $router.replace('#top');
+                                        "
+                                      />
+                                    </q-tab-panel>
+
+                                    <q-tab-panel name="copy">
+                                       <div class="text-h6">Copy and paste your link</div>
+                                     <p>Copy and paste the link below to send to one of you customers.</p>
+                                    <q-input
+                                        flat
+                                        v-model="text"
+                                        placeholder="acornfinance.com/apply/EWY"
+                                        text="acornfinance.com/apply/EWY"
+                                      >
+                                        <template v-slot:append>
+                                          <q-icon name="file_copy" color="accent" />
+                                        </template>
+                                      </q-input>
+                                    </q-tab-panel>
+                                  </q-tab-panels>
+                          
+
+                               
+                              </div>
+                  
+          
+
+
+
+
+
+
+             
+                
+
+          
+
+
+
+                       
+
+                      <br />
+                    
                       </q-banner>
                       <br />
-                      <q-input
-                        outlined
-                        v-model="text"
-                        placeholder="acornfinance.com/apply/EWY"
-                        text="acornfinance.com/apply/EWY"
-                      >
-                        <template v-slot:append>
-                          <q-icon name="file_copy" color="accent" />
-                        </template>
-                      </q-input>
+                     
 
                       <br />
                       <br />
@@ -873,6 +957,7 @@ export default {
     return {
       step: ref(1),
       card: ref(true),
+      tab: ref('text'),
     };
   },
 };

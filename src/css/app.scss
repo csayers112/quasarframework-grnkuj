@@ -129,13 +129,14 @@ h1 {
   padding-top: 20px;
 }
 
-.onboarding-experience-navigation {
-  position: fixed;
-  width:58%;
-  background-color:#f8f8f8;
-  bottom: 0px;
-  left: 0px;
+.q-panel-parent{
+  background-color: transparent;
 }
+
+.q-tab-panel{
+  padding-top:0px !important;
+}
+
 
 /*---------------- ONBOARDING SPECIFIC STYLES --------------------*/
 
@@ -182,4 +183,14 @@ h1 {
     0 6px 2px -5px rgb(0 0 0 / 24%);
   transform: translateY(-5px);
   background-color: #f5fcfd;
+}
+
+.onboarding-experience-navigation {
+  position: fixed;
+  width:58%;
+  background-color:#f8f8f8;
+  bottom: 0px;
+  left: 0px;
+  height: 82px;
+  padding-top: 15px !important;
 }

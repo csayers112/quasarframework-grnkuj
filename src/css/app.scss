@@ -42,6 +42,9 @@
   .showDesktop {
     display: none !important;
   }
+  .onboarding-experience-navigation {
+    width:100% !important;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -62,6 +65,9 @@
   }
   .showDesktop {
     display: none !important;
+  }
+  .onboarding-experience-navigation {
+    width:100% !important;
   }
 }
 
@@ -121,6 +127,14 @@ h1 {
 
 .q-banner {
   padding-top: 20px;
+}
+
+.onboarding-experience-navigation {
+  position: fixed;
+  width:58%;
+  background-color:#f8f8f8;
+  bottom: 0px;
+  left: 0px;
 }
 
 /*---------------- ONBOARDING SPECIFIC STYLES --------------------*/

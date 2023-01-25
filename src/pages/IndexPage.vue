@@ -8,7 +8,7 @@
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
         <div
-          class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first"
+          class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last"
         >
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
@@ -47,10 +47,32 @@
                           Booking a call with a contractor adviser is the
                           easiest way to get started.
                         </p>
+                        <div class="q-gutter-sm">
+                          <q-btn
+                          outline
+                          color="accent"
+                          label="Setup a call"
+                          icon-right="navigate_next"
+                          @click="
+                            $refs.stepper.goTo(3);
+                            $router.replace('#top');
+                          "
+                        />
+                        <q-btn
+                          outline
+                          color="accent"
+                          label="Get your financing link"
+                          icon-right="navigate_next"
+                          @click="
+                            $refs.stepper.goTo(2);
+                            $router.replace('#top');
+                          "
+                        />
+                        </div>
                       </q-banner>
                       <br />
-                      <q-btn
-                        color="secondary"
+                      <!--<q-btn
+                        color="accent"
                         icon="event"
                         class="full-width"
                         label="Talk to us"
@@ -62,7 +84,7 @@
                       <div style="text-align: center" class="justify-center">
                         <q-btn
                           flat
-                          color="secondary"
+                          color="accent"
                           label="Get your link"
                           icon-right="navigate_next"
                           @click="
@@ -70,11 +92,11 @@
                             $router.replace('#top');
                           "
                         />
-                      </div>
+                      </div>-->
 
                       <br />
                       <br />
-                      <p class="eyebrow-text">GET YOUR TOOLS</p>
+                      <p class="eyebrow-text">WHAT WE'LL COVER</p>
 
                       <div class="showDesktop home-cards">
                         <div class="row q-col-gutter-x-md q-col-gutter-y-lg">
@@ -200,7 +222,12 @@
                             </div>
                           </div>
                         </div>
+                          <br />
+                          <br />
+                          <br />
+                          <br />
                       </div>
+
                       <div class="showMobile">
                         <q-list>
                           <q-item
@@ -301,6 +328,11 @@
                             </q-item-section>
                           </q-item>
                         </q-list>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            
                       </div>
                     </q-step>
 
@@ -738,9 +770,13 @@
                         "
                       />
                     </q-step>
+                    <br/>
+                    <br />
+                    <br />
 
                     <template v-slot:navigation>
-                      <q-stepper-navigation>
+                   
+                      <q-stepper-navigation class="onboarding-experience-navigation">
                         <div style="float: right">
                           <q-btn
                             v-if="step > 1"
@@ -763,7 +799,6 @@
                             :label="step === 6 ? 'My Portal' : 'Next'"
                           ></q-btn>
                         </div>
-
                         <div style="float: left">
                           <q-btn
                             v-if="step > 1"
@@ -778,6 +813,7 @@
                           ></q-btn>
                         </div>
                       </q-stepper-navigation>
+                     
                     </template>
                   </q-stepper>
 

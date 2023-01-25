@@ -19,7 +19,7 @@
         <q-space />
 
 
-        <q-btn color="secondary" label="Talk to us"></q-btn>
+        <q-btn flat color="secondary" label="Talk to us"></q-btn>
       </q-toolbar>
     </q-header>
 

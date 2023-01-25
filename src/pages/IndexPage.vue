@@ -543,6 +543,8 @@
                         See what your customers see when they click on your
                         application link.
                       </p>
+                      <br />
+                      <br />
                       <p class="eyebrow-text">HOW TO USE YOUR LINK</p>
 
                       <q-timeline
@@ -861,7 +863,7 @@
                     <template v-slot:navigation>
                    
                       <q-stepper-navigation class="onboarding-experience-navigation">
-                        <div style="float: right">
+                        <div style="float: right" class="q-gutter-sm">
                           <q-btn
                             v-if="step > 1"
                             flat

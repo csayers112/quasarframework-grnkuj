@@ -8,7 +8,7 @@
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
         <div
-          class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-last"
+          class="showMobile col-md-5 col-lg-5 col-xs-12 col-sm-12 order-first"
         >
           <div class="top-image" style="margin-top: -10px"></div>
         </div>
@@ -27,7 +27,7 @@
                   >
                     <q-step
                       :name="1"
-                      title="Select campaign settings"
+                      title="Welcome to Acorn Finance"
                       icon="settings"
                       :done="step > 1"
                     >
@@ -61,7 +61,7 @@
                         <q-btn
                           outline
                           color="accent"
-                          label="Get your financing link"
+                          label="Offer financing now"
                           icon-right="navigate_next"
                           @click="
                             $refs.stepper.goTo(2);
@@ -340,7 +340,7 @@
 
                     <q-step
                       :name="2"
-                      title="Get your link"
+                      title="Offer financing now"
                       caption="Optional"
                       icon="create_new_folder"
                       :done="step > 2"
@@ -366,9 +366,6 @@
 
                         <br />
                         
-                  
-                
-                           
                               <div class="q-gutter-y-md">
                          
                                   <q-tabs
@@ -435,31 +432,12 @@
 
                                
                               </div>
-                  
-          
-
-
-
-
-
-
-             
-                
-
-          
-
-
-
-                       
-
                       <br />
                     
                       </q-banner>
                       <br />
-                     
-
                       <br />
-                      <br />
+                    
                       <p class="eyebrow-text">HOW TO USE YOUR LINK</p>
 
                       <q-timeline
@@ -503,6 +481,10 @@
                             Keep your link handy so you can use it when you need
                             it.
                           </div>
+
+                          <br />
+                          <br />
+                          <br />
                         </q-timeline-entry>
                       </q-timeline>
                     </q-step>
@@ -584,7 +566,7 @@
                           side="right"
                         >
                           <div class="">
-                            TA short online form asks a few questions to see
+                            A short online form asks a few questions to see
                             which offers they’re prequalified for from our 12+
                             lending partners, tailored to their credit profile.
                             Each step explains what we need to know and why,
@@ -663,7 +645,7 @@
 
                     <q-step
                       :name="5"
-                      title="Talk about Financing"
+                      title="Talk about financing"
                       icon="add_comment"
                       :done="step > 5"
                     >
@@ -825,6 +807,12 @@
                           </q-card>
                         </q-expansion-item>
                       </q-list>
+
+                      <br/>
+                    <br />
+                    <br /><br/>
+                    <br />
+                    <br />
                     </q-step>
 
                     <q-step
@@ -882,7 +870,7 @@
                               $router.replace('#top');
                             "
                             color="secondary"
-                            :label="step === 6 ? 'My Portal' : 'Next'"
+                            :label="step === 6 ? 'Finish up' : step === 1 ? 'Next: Get your link' : step === 2 ? 'Next: Talk to us' : step === 3 ? 'Next: How it works' : step === 4 ? 'Next: FAQs' : step === 5 ? 'Next: Your Portal' : 'Next: '"
                           ></q-btn>
                         </div>
                         <div style="float: left">
@@ -894,7 +882,7 @@
                               $refs.stepper.goTo(1);
                               $router.replace('#top');
                             "
-                            label="Menu"
+                            label="Home"
                             class="q-ml-sm"
                           ></q-btn>
                         </div>

@@ -3,9 +3,7 @@
 /* ----------- MEDIA QUERIES ------------------*/
 
 @media all and (min-width: 1280px) {
-  .content {
-    padding: 15px;
-  }
+
   .showMobile {
     display: none !important;
   }
@@ -16,7 +14,7 @@
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
   .content {
-    padding: 15px;
+    padding:50px 30px !important;
   }
   .showMobile {
     display: none !important;
@@ -29,7 +27,7 @@
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
-    height: 150px !important;
+    height: 100px !important;
     width: 100% !important;
     position: relative !important;
   }
@@ -50,7 +48,7 @@
 @media all and (max-width: 768px) {
   .top-image {
     background-image: url(../src/assets/contractor-shaking-hands-with-customer-alt.png) !important;
-    height: 150px !important;
+    height: 100px !important;
     width: 100% !important;
     position: relative !important;
   }

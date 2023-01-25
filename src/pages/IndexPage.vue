@@ -73,29 +73,7 @@
                         </div>
                       </q-banner>
                       <br />
-                      <!--<q-btn
-                        color="accent"
-                        icon="event"
-                        class="full-width"
-                        label="Talk to us"
-                        @click="
-                          $refs.stepper.goTo(3);
-                          $router.replace('#top');
-                        "
-                      ></q-btn>
-                      <div style="text-align: center" class="justify-center">
-                        <q-btn
-                          flat
-                          color="accent"
-                          label="Get your link"
-                          icon-right="navigate_next"
-                          @click="
-                            $refs.stepper.goTo(2);
-                            $router.replace('#top');
-                          "
-                        />
-                      </div>-->
-
+                      
                       <br />
                       <br />
                       <p class="eyebrow-text">WHAT WE'LL COVER</p>
@@ -342,7 +320,7 @@
                       :name="2"
                       title="Offer financing now"
                       caption="Optional"
-                      icon="create_new_folder"
+                      icon="content_copy"
                       :done="step > 2"
                     >
                       <p class="eyebrow-text">BRING ON THE APPLICATIONS</p>
@@ -492,7 +470,7 @@
                     <q-step
                       :name="3"
                       title="Book a meeting"
-                      icon="add_comment"
+                      icon="call"
                       :done="step > 3"
                     >
                       <p class="eyebrow-text">BOOK A MEETING</p>
@@ -516,7 +494,7 @@
                     <q-step
                       :name="4"
                       title="Talk about Financing"
-                      icon="add_comment"
+                      icon="groups"
                       :done="step > 4"
                     >
                       <p class="eyebrow-text">PREVIEW THE PROCESS</p>
@@ -646,7 +624,7 @@
                     <q-step
                       :name="5"
                       title="Talk about financing"
-                      icon="add_comment"
+                      icon="call"
                       :done="step > 5"
                     >
                       <p class="eyebrow-text">SAVE SOME SHORTCUTS</p>
@@ -818,7 +796,7 @@
                     <q-step
                       :name="6"
                       title="Head to the Portal"
-                      icon="add_comment"
+                      icon="computer"
                       :done="step > 6"
                     >
                       <p class="eyebrow-text">CREATE YOUR ACCOUNT</p>
@@ -921,7 +899,7 @@
                         <q-btn
                           v-close-popup
                           color="secondary"
-                          label="Explore"
+                          label="Get started"
                         />
                       </q-card-actions>
                     </q-card>

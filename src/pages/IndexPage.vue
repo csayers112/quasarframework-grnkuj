@@ -837,7 +837,7 @@
                               $router.replace('#top');
                             "
                             color="secondary"
-                            :label="step === 6 ? 'Finish up' : step === 1 ? 'Next: Offer financing' : step === 2 ? 'Next: Talk to us' : step === 3 ? 'Next: How it works' : step === 4 ? 'Next: FAQs' : step === 5 ? 'Next: Your Portal' : 'Next: '"
+                            :label="step === 6 ? 'Go to my Portal' : step === 1 ? 'Next: Offer financing' : step === 2 ? 'Next: Talk to us' : step === 3 ? 'Next: How it works' : step === 4 ? 'Next: FAQs' : step === 5 ? 'Next: Your Portal' : 'Next: '"
                           ></q-btn>
                         </div>
                         <div style="float: left">

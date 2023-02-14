@@ -236,7 +236,7 @@
                             v-ripple
                           >
                             <q-item-section
-                              >Learn how to talk about financing</q-item-section
+                              >See what your customer sees</q-item-section
                             >
                             <q-item-section avatar>
                               <q-icon color="primary" name="navigate_next" />
@@ -252,7 +252,7 @@
                             v-ripple
                           >
                             <q-item-section
-                              >See what your customer sees</q-item-section
+                              >Learn how to talk about financing</q-item-section
                             >
                             <q-item-section avatar>
                               <q-icon color="primary" name="navigate_next" />

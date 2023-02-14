@@ -545,7 +545,7 @@
                               src="/src/assets/how-it-works-2.png"
                               style="
                                 width: 100%;
-                                max-width: 500px !important;
+                                max-width: 400px !important;
                                 height: auto;
                                 margin-bottom: 40px;
                                 margin-top: 20px;
@@ -571,7 +571,7 @@
                               src="/src/assets/how-it-works-3.png"
                               style="
                                 width: 100%;
-                                max-width: 500px !important;
+                                max-width: 400px !important;
                                 height: auto;
                                 margin-bottom: 40px;
                                 margin-top: 20px;
@@ -597,7 +597,7 @@
                               src="/src/assets/how-it-works-4.png"
                               style="
                                 width: 100%;
-                                max-width: 500px !important;
+                                max-width: 400px !important;
                                 height: auto;
                                 margin-bottom: 40px;
                                 margin-top: 20px;

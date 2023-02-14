@@ -31,12 +31,12 @@
                       icon="settings"
                       :done="step > 1"
                     >
-                      <p class="eyebrow-text">WELCOME TO BETTER</p>
+                      <p class="eyebrow-text">WELCOME TO FINANCING TRAINING</p>
                       <h1 class="main-headline">
                         Let’s get you up and running.
                       </h1>
                       <p style="font-size: 20px">
-                        We promised you simple. Now we prove it.
+                        We'll guide you through everything you'll need to get up and running to offer financing to your customers. 
                       </p>
                       <q-banner class="bg-grey-3">
                         <template v-slot:avatar>
@@ -141,7 +141,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-4">
+                          <div class="col-6">
                             <div class="q-card my-card">
                               <div
                                 @click="
@@ -163,26 +163,8 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-4">
-                            <div class="q-card my-card">
-                              <div
-                                @click="
-                                  $refs.stepper.goTo(6);
-                                  $router.replace('#top');
-                                "
-                                class="q-card__section q-card__section--vert"
-                              >
-                                <q-item-section
-                                  avatar
-                                  style="margin-bottom: 10px"
-                                >
-                                  <q-icon color="secondary" name="notes" />
-                                </q-item-section>
-                                <p>Snag a cheatsheet to answer questions</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4">
+                          
+                          <div class="col-6">
                             <div class="q-card my-card">
                               <div
                                 @click="
@@ -277,22 +259,7 @@
                             </q-item-section>
                           </q-item>
 
-                          <q-item
-                            @click="
-                              $refs.stepper.goTo(6);
-                              $router.replace('#top');
-                            "
-                            clickable
-                            v-ripple
-                          >
-                            <q-item-section
-                              >Snag a cheatsheet to answer
-                              questions</q-item-section
-                            >
-                            <q-item-section avatar>
-                              <q-icon color="primary" name="navigate_next" />
-                            </q-item-section>
-                          </q-item>
+                        
 
                           <q-item
                             @click="
@@ -341,9 +308,7 @@
                           Bookmark this link on the homepage of your phone to
                           keep it handy.
                         </p>
-
                         <br />
-                        
                               <div class="q-gutter-y-md">
                          
                                   <q-tabs
@@ -364,12 +329,24 @@
 
                                   <q-tab-panels v-model="tab" animated>
                                     <q-tab-panel name="text">
-                                      <div class="text-h6">Send me a text</div>
-                                     <p> We'll send you a text message of your application link to <br /> <b>555-555-5555</b> </p>
+                                      <div class="text-h6">Share your link with a text</div>
+                                     <p>Enter your customer's phone number below, and we'll send a text message to them with your financing link.</p>
+                                     
+                                     <q-input
+                                        outlined
+                                        bg-color="white"
+                                        placeholder="Example: 555-555-5555"
+                                        text=""
+                                      >
+                                        <template v-slot:append>
+                                          <q-icon name="" color="accent" />
+                                        </template>
+                                      </q-input>
+                                     <br />
                                      <q-btn
                                         outline
                                         color="accent"
-                                        label="Send me a text"
+                                        label="Send a text"
                                         icon-right="navigate_next"
                                         @click="
                                           $router.replace('#top');
@@ -378,12 +355,23 @@
                                     </q-tab-panel>
 
                                     <q-tab-panel name="email">
-                                     <div class="text-h6">Send me an email</div>
-                                     <p> We'll send you an email of your application link to <br /> <b>jsample@gmail.com</b> </p>
+                                     <div class="text-h6">Share your link with an email</div>
+                                      <p>Enter your customer's email address below, and we'll send an email to them with your financing link.</p>
+                                     
+                                     <q-input
+                                        outlined
+                                        bg-color="white"
+                                        placeholder="Example: johnsample@gmail.com"
+                                        text=""
+                                      > <template v-slot:append>
+                                          <q-icon name="" color="accent" />
+                                        </template>
+                                      </q-input>
+                                      <br />
                                      <q-btn
                                         outline
                                         color="accent"
-                                        label="Send me an email"
+                                        label="Send an email"
                                         icon-right="navigate_next"
                                         @click="
                                           $router.replace('#top');
@@ -395,7 +383,8 @@
                                        <div class="text-h6">Copy and paste your link</div>
                                      <p>Copy and paste the link below to send to one of you customers.</p>
                                     <q-input
-                                        flat
+                                        outlined
+                                        bg-color="white"
                                         v-model="text"
                                         placeholder="acornfinance.com/apply/EWY"
                                         text="acornfinance.com/apply/EWY"
@@ -848,7 +837,7 @@
                               $router.replace('#top');
                             "
                             color="secondary"
-                            :label="step === 6 ? 'Finish up' : step === 1 ? 'Next: Get your link' : step === 2 ? 'Next: Talk to us' : step === 3 ? 'Next: How it works' : step === 4 ? 'Next: FAQs' : step === 5 ? 'Next: Your Portal' : 'Next: '"
+                            :label="step === 6 ? 'Finish up' : step === 1 ? 'Next: Offer financing' : step === 2 ? 'Next: Talk to us' : step === 3 ? 'Next: How it works' : step === 4 ? 'Next: FAQs' : step === 5 ? 'Next: Your Portal' : 'Next: '"
                           ></q-btn>
                         </div>
                         <div style="float: left">

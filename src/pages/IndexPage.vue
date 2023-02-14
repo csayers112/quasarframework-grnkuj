@@ -542,7 +542,7 @@
                             credit won’t be affected.
                             <br />
                             <img
-                              src="/src/assets/graphic-2.png"
+                              src="/src/assets/how-it-works-2.png"
                               style="
                                 width: 100%;
                                 max-width: 200px !important;
@@ -568,7 +568,7 @@
                             we’re getting a little more committed.
                             <br />
                             <img
-                              src="/src/assets/graphic-3.png"
+                              src="/src/assets/how-it-works-3.png"
                               style="
                                 width: 100%;
                                 max-width: 200px !important;
@@ -594,7 +594,7 @@
                             it all starts again.
                             <br />
                             <img
-                              src="/src/assets/graphic-4.png"
+                              src="/src/assets/how-it-works-4.png"
                               style="
                                 width: 100%;
                                 max-width: 200px !important;
